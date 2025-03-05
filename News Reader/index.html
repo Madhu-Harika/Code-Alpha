@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>News Aggregator</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="header">
+    <h1>News Aggregator</h1>
+  </div>
+  <div class="search-bar">
+    <input type="text" id="search" placeholder="Search news...">
+    <button onclick="handleSearch()">Search</button>
+  </div>
+  <div class="categories">
+    <button onclick="filterNews('general')">General</button>
+    <button onclick="filterNews('sports')">Sports</button>
+    <button onclick="filterNews('technology')">Technology</button>
+    <button onclick="filterNews('entertainment')">Entertainment</button>
+  </div>
+
+  <div class="news-container" id="news-container">
+    <div class="calendar-component">
+      <h2 class="date calendar"> 14 Febrauary, 2025</h2>
+    </div>
+    <div class="calender-component_calendar">
+      <div class="calendar-clearfix" id="calendar"></div>
+      <a tabindex="10" class="calender-view"></a>
+      <i class="fa-solid fa-calendar-days"></i>
+      <span class="ico.ico-calendar"></span>
+      <span class="label">calendar</span>
+    </div>
+  </div>
+
+  <div class="news-section">
+    <div class="news1">
+      <div class="box1 box">
+        <h2>Two students of Ashoka University found dead on campus in Haryana</h2>
+        <img src="images/img2.webp" alt="">
+        <p>Two students of Ashoka University both pursuing the undergraduate degree were found dead between late Friday
+          and early Saturday on the campus in Haryana's Sonipat</p>.
+        <p style="font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">February 12, 2025</p>
+      </div>
+      <div class="box2 box">
+        <h2>Scenes from the frontlines as outnumbered Ukraine fights off Russian attacks</h2>
+        <img src="images/img 3.avif" alt="">
+        <p>In what has become a war of attrition now nearing its three-year mark, both sides are sustaining heavy
+          casualties as Moscow's forces slowly but steadily advance at a time when the scale and nature of any future
+          U.S. military aid to Kyiv remains unclear.</p>
+        <p style="font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">February 13, 2025.</p>
+      </div>
+      <div class="box3 box">
+        <h2>Trump's inauguration through the eyes of Reuters photographers</h2>
+        <img src="images/img 3.avif" alt="">
+        <p>U.S. President Donald Trump takes oath on the day of his Presidential Inauguration at the Rotunda of the U.S.
+          Capitol in Washington, U.S., January 20, 2025.</p>
+        <p style="font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">January 21, 2025.</p>
+      </div>
+      <div class="news2">
+        <div class="box4 box">
+          <h2>Apple aims to bring AI features and spatial content app to Vision Pro, Bloomberg reports</h2>
+          <img src="images/img 4.jpg" alt="">
+          <p>The company plans to roll out the features as part of a software upgrade and they could be available in
+            beta version for developers as soon as this week, the report added, citing people familiar with the matter.
+          </p>.
+          <p style="font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">February 16, 2025</p>
+        </div>
+        <div class="box5 box">
+          <h2>Wall St Week Ahead Walmart to shed light on consumer health as inflation bites, tariffs swirl</h2>
+          <img src="images/img 5.avif" alt="">
+          <p>Walmart's quarterly report in the coming week will give investors fresh insight into the health of U.S.
+            consumers, who are facing stronger inflation and uncertainty over whether President Donald Trump's tariffs
+            will push up prices..</p>.
+          <p style="font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif   ">February 16, 2025</p>
+        </div>
+        <div class="box6 box">
+          <h2>Canadian banks must reveal diversity of board, top managers under new
+            rules</h2>
+          <img src="images/img 6.avif" alt="">
+          <p> Canadian banks and other national institutions have to disclose information about the diversity of their
+            boards of directors and top management under new rules published on Saturday, in sharp contrast with the
+            U.S. Trump administration which is ending such practices.
+            <!-- Federally regulated financial institutions must also disclose policies to increase diversity while sending out notices of annual meetings to shareholders.</p>. -->
+          <p style="font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif   ">February 16, 2025</p>
+        </div>
+      </div>
+      <div class="news3">
+        <div class="box7 box">
+          <h2>New downloads of DeepSeek suspended in South Korea, data protection agency says</h2>
+          <img src="images/img 7.avif" alt="">
+          <p> South Korea's data protection authority on Monday said new downloads of the Chinese AI app DeepSeek had
+            been suspended in the country after DeepSeek acknowledged failing to take into account some of the agency's
+            rules on protecting personal data.</p>.
+          <p style="font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif   ">February 17, 2025</p>
+        </div>
+        <div class="box8 box">
+          <h2>Why Elon Musk is a headache for broadband bosses</h2>
+          <img src="images/img 8.avif" alt="">
+          <p> Elon Musk, chief executive officer of SpaceX and Tesla, speaks to the media during the launch of SpaceX's
+            Starlink internet service in Indonesia at a sub district community health center in Denpasar, Bali, May 19,
+            2024.</p>.
+          <p style="font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif   ">February 11, 2025</p>
+        </div>
+        <div class="box9 box">
+          <h2>More than 40% of Indians feel Trump will be favourable to India,
+            survey shows</h2>
+          <img src="images/img 9.avif" alt="">
+          <p> U.S. President Donald Trump and India's Prime Minister Narendra Modi talk as they arrive for a joint news
+            conference after bilateral talks at Hyderabad House in New Delhi, India, February 25, 2020. .</p>.
+          <p style="font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif   ">February 13, 2025</p>
+        </div>
+      </div>
+      <div class="topic-loadmore">
+        <button class="button1" type="button" data-testid="textbutton">
+          <span class="button-container">
+            <span data-testid="text" class="text-text">Load more....</span>
+          </span>
+        </button>
+      </div>
+
+
+      <footer>
+        <div class="footer-section">
+          <ul>
+            <p>Latest</p>
+            <a href="">Home</a>
+            <a href="">Authors</a>
+            <a href="">Topic Sitemap</a>
+            <a href="">Archive</a>
+            <a href="">Article Sitemap</a>
+            <!-- <a href="">Amazon Science</a> -->
+          </ul>
+          <ul>
+            <p>Browse</p>
+            <a href="">World</a>
+            <a href="">Business</a>
+            <a href="">Markets</a>
+            <a href="">Sustainability</a>
+            <a href="">Legal</a>
+            <a href="">Breakingviews</a>
+            <a href="">Technology</a>
+            <a href="">Investigations</a>
+            <a href="">Sports</a>
+            <a href="">Science</a>
+            <a href="">Lifestyle</a>
+          </ul>
+          <ul>
+            <p>Media</p>
+            <a href="">Videos</a>
+            <a href="">Pictures</a>
+            <a href="">Graphics</a>
+            <a href="">Podcasts</a>
+          </ul>
+          <ul>
+            <p>About News Agreegator</p>
+            <a href="">About News Agreegator</a>
+            <a href="">About us</a>
+            <a href="">Advertise with us</a>
+            <a href="">Careers</a>
+            <a href="">New Letters</a>
+            <a href="">News Articles</a>
+            <a href="">News information</a>
+            <a href="">News reports</a>
+            <!-- <a href="">Sports</a>
+          <a href="">Science</a>
+          <a href="">Lifestyle</a> -->
+          </ul>
+        </div>
+
+        <div class="site-footer">
+          <h2> <a href="#" onclick="">Latest Stories</a></h2>
+          <div class="sectitle1">
+            <ul style="display: flex;">
+              <li>
+                <a href="">Bengaluru: Two college students killed, two injured in speeding car crash near Ragihalli
+                  forest</a>
+              </li>
+              <li>
+                <a href="">‘They knew’: French paedophile victims blame institutional failure</a>
+              </li>
+              <li>
+                <a href="">300 cats found in Pune apartment, municipal corporation steps in</a>
+              </li>
+            </ul>
+          </div>
+          <div class="sectitle2">
+            <ul style="display: flex;">
+              <li>
+                <a href="">Pachinko actress confirmed as Lee Junho's co-star for Fight for My Way director's new
+                  drama</a>
+              </li>
+              <li>
+                <a href="">3Mexico threatens lawsuit against Google over Gulf of Mexico name change</a>
+              </li>
+              <li>
+                <a href="">iPhone 17 Pro, iPhone 17 Air models to get significant design changes- All details</a>
+              </li>
+            </ul>
+          </div>
+          <div class="sectitle3">
+            <ul style="display: flex;">
+              <li>
+                <a href="">Is being a morning person good for you? Here's what a new study says</a>
+              </li>
+              <li>
+                <a href="">NFL kicker Justin Tucker facing multiple allegations of sexual misconduct is a bad omen for
+                Ravens</a>
+              </li>
+              <li>
+                <a href="">Oman vs USA Live Score: Match 54 of ICC CWC League 2, 2023-27 to start at 11:30 AM</a>
+              </li>
+            </ul>
+          </div>
+          <!-- <div class="sectitle2">
+
+                <li>
+                  <a href="">Pachinko actress confirmed as Lee Junho's co-star for Fight for My Way director's new
+                    drama</a>
+                </li>
+                <li>
+                  <a href="">3Mexico threatens lawsuit against Google over Gulf of Mexico name change</a>
+                </li>
+                <li>
+                  <a href="">iPhone 17 Pro, iPhone 17 Air models to get significant design changes- All details</a>
+                </li>
+              </div>
+              <li>
+                <a href="">Is being a morning person good for you? Here's what a new study says</a>
+              </li>
+              <li>
+                <a href="">NFL kicker Justin Tucker facing multiple allegations of sexual misconduct is a bad omen for
+                  Ravens</a>
+              </li>
+              <li>
+                <a href="">Oman vs USA Live Score: Match 54 of ICC CWC League 2, 2023-27 to start at 11:30 AM</a>
+              </li>
+            </ul>
+          </div>
+        </div> -->
+
+          <div class="footer-last">
+            <div class="container">
+              <div class="links-1-4">
+                <li>
+                  <a href="">About us</a>
+                </li>
+                <li>
+                  <a href="">Contact us</a>
+                </li>
+                <li>
+                  <a href="">Terms of use</a>
+                </li>
+                <li>
+                  <a href="">Privacy Policy</a>
+                </li>
+              </div>
+
+              <div class="links-2-4">
+                <li>
+                  <a href="">News Letters</a>
+                </li>
+                <li>
+                  <a href="">Subscription</a>
+                </li>
+                <li>
+                  <a href="">Code of Ethics</a>
+                </li>
+                <li>
+                  <a href="">Site Map</a>
+                </li>
+                <li>
+                  <a href="">RSS Feeds</a>
+                </li>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+</body>
+
+</html>
